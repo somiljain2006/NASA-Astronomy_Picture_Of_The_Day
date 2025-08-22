@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Space Picture Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="shooting-star"></div>
+  <div class="shooting-star2"></div>
+  <div class="shooting-star3"></div>
+  <div class="container">
+    <h1>
+        Astron<span class="orbit-center">o<span class="satellite-wrapper"><span class="satellite"></span></span></span>my Picture of the Day
+    </h1>
+    <p id="loading"></p>
+    <div id="content" class="card">
+      <h2 id="title"></h2>
+      <img id="image" alt="Astronomy Picture">
+      <p id="description"></p>
+      <div class="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
