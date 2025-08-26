@@ -19,16 +19,27 @@ async function apod(date) {
     titl.textContent = data.title;
     disc.textContent = data.explanation;
     img.classList.remove("loaded");
-    img.src = data.url.replace(/^http:/, "https:");
-    img.addEventListener("load", () => {
+    let imgUrl = "";
+    if (data.media_type === "image") {
+      imgUrl = data.url.replace(/^http:/, "https:");
+    } else {
+      imgUrl = "alternate.webp"; 
+    }
+    img.onload = () => {
       img.classList.add("loaded");
       load.textContent = "";
-    });
+    };
+    img.onerror = () => {
+      load.textContent = "Could not load image";
+    };
+    img.src = imgUrl;
     img.style.display = "block";
-    } catch (err) {
-        load.textContent = err.message;
-    }
-};
+  } catch (err) {
+    load.textContent = err.message;
+  }
+}
+
+
 document.getElementById("prev").addEventListener("click", () => {
   curr.setDate(curr.getDate() - 1);
   apod(format(curr));
