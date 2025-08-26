@@ -1,5 +1,5 @@
-# NASA_si
-Project for SI
+# NASA
+A simple web app that fetches and displays the Astronomy Picture of the Day (APOD) from NASA’s API.
 
 # Tools used
 - HTML
