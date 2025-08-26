@@ -9,5 +9,7 @@ A simple web app that fetches and displays the Astronomy Picture of the Day (APO
 
 # Details
 **Name:** Somil Jain
+
 **Branch:** CSE
+
 **Roll No:** 2400270100174
